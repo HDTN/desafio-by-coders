@@ -1,0 +1,144 @@
+.table_wrapper{
+  overflow: auto;
+  width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  position: relative;
+}
+
+.table_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-collapse: separate;
+  border-spacing: 1px .5em;
+  word-break: break-all;
+  width: 100%;  
+}
+
+thead tr{
+  display:block;
+} 
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  white-space: nowrap;
+  font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+}
+
+tbody{
+  display: table;
+  width: 100%;
+}
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+tbody tr{
+  margin-bottom: .5em;
+}
+
+tbody tr:nth-child(2n){
+  background: whitesmoke;
+}
+
+tbody tr:nth-child(2n+1){
+  background: #ccc;
+}
+
+.table_header{
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: #fff;
+  height: fit-content;
+  border-radius: 1em;
+  box-shadow: 0px 4px 10px rgba(128,128,128,.25);
+}
+
+.table_header form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.table_filter-select{
+  padding: 1em 2em;
+  border-radius: 1em;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(128,128,128,.25);
+  font-weight: bold;
+  outline: none;
+  flex: 1;
+}
+
+.table_filter-select:hover{
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px #02be3b;
+}
+
+.table_btn-light{
+  border: none;
+  padding: .5em 1em;
+  border-radius: 1em;
+  box-shadow: 0px 4px 10px rgba(128, 128, 128, .25);
+  display: inline-flex;
+  align-items: center;
+}
+
+.table_btn-light:hover{
+  cursor: pointer;
+}
+
+.table_filters{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 769px) {
+    .td-data {
+        display: none !important;
+    }
+    .td-cpf {
+        display: none !important;
+    }
+    .td-nome_proprietario {
+        display: none !important;
+    }
+    .td-hora {
+        display: none !important;
+    }
+    .td-cartao {
+        display: none !important;
+    }
+
+    .table_header form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1em;
+    }
+    .table_filter-select{
+      padding: 1em;
+    }
+
+    .table_filters{
+      width: 100%;
+      margin-bottom: 1.5em;    
+    }
+
+}
+
+
+
+
